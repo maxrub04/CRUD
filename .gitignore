@@ -1,0 +1,84 @@
+Turing Test
+-A and B communiate in natural language
+-A is a human and B is a machine pretending to be a human
+-C observes their conversation/communication 
+-C figures out who is human and which is a machine
+No machine passed the test(so far)
+
+weak:learining, reasoning, knowledge representation, adaptivity
+strong: counscinstess, evolution, awareness of self boundaries, creativity
+
+motivation of data mining:
+- data is huge and intersting but hard to be analysed directly by humans
+- data kept in digital form
+
+-decision table
+cases=rows
+attributes=columns
+
+supervised learinng:
+-there is known "correct" answers provided to the system in the training dataset
+-system/model learns on previously observed data (supervisor provides correct answers)
+-it applies what the model learnt to new cases
+classification, when  decision attributes are nominal 
+regression, when decision attributes are numeric
+
+unsupervised learinng:
+-no learning/teaching signal(only raw data)
+-the task/goal; to find te structures or mapping between cases and attributes values
+
+how to achive supervised learning:
+-rule-based
+-instance-based
+-decision trees
+-neural networks
+-linear regression
+
+perceptron - is a simple mathematical model of a neuron 
+
+math representation
+input value:x1,x2,x2,..,xn
+weights:w1,w2,w3,..,wn
+threshold:Ø
+transpose;:T
+output:y
+
+y={1,W^T*X >= Ø
+0,otherwise}
+
+math limitaions:
+1-can only classifiy linear separable dataset
+2- cant represent functions like XOR, which is not linear sepaarble
+
+step/sign function
+1 - y =sign(net)
+
+net=sum(wi*xi-Ø)
+
+sigmoid for
+unipolar:y=(1)/(1+e^(-net))
+bipolar:y=(2)/(1+e^(-net))-1
+
+limitations of single perceptopn as classifier 
+-Can only clasify only two classes
+-works only linear separable problems
+-cant solve problems like XOR
+
+Local:
+-each percepton is trained to activiate exaclt for one class
+-the number is the same as the number of classes
+-desire output: while one perceptron is activated, others are not
+
+global;
+-there is no rule for nnumber perceptrons
+-minimal number of perceptron = log2K 
+
+precioson= the ratio of the cases that are actually positive among the all cases that were classified as positive by classificator
+recall= the ratio of all positive cases correctly classified by classifcator by the all cases tht are actually positive
+
+f measure=(2*P*R)/(P+R)
+
+back-propagation model;
+after getting the vector output, we starting modifying weights from the last layer towards the first one (backwords)
+
+
