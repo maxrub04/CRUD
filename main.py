@@ -1,6 +1,6 @@
 import re
 import json
-import User_Model
+from User_Model import User
 import User_Manager
 
 while True:
