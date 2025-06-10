@@ -1,7 +1,9 @@
 import re
 import json
-import User_Manager as User
+from User_Manager import UserManager
 
+
+user_manager = UserManager()
 while True:
         print("\n--- User CRUD Menu ---")
         print("1. Create User")
@@ -14,15 +16,15 @@ while True:
         choice = input("Enter choice (1–6): ")
 
         if choice == '1':
-            User.create_user()
+            user_manager.create_user()
         elif choice == '2':
-            User.view_user()
+            user_manager.view_user()
         elif choice == '3':
-            User.update_user()
+            user_manager.update_user()
         elif choice == '4':
-            User.delete_user()
+            user_manager.delete_user()
         elif choice == '5':
-            User.list_users()
+            user_manager.show_all_users()
         elif choice == '0':
             break
         else:

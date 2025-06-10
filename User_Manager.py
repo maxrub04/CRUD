@@ -1,6 +1,6 @@
 import json
 import os
-import User_Model as User
+from User_Model import User
 import re
 
 class UserManager:
