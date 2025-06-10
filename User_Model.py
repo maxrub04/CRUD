@@ -1,5 +1,3 @@
-import re
-
 
 class User:
 
@@ -19,7 +17,11 @@ class User:
             "age": self.age
         }
 
-    @staticmethod
+    @classmethod
+    def from_dict(cls, data):
+        return cls(data["username"], data["name"], data["email"], data["phone"], data["age"])
+
+    """@staticmethod
     def validate_username(username, existing_users):
         if not username.strip():
             print("Username cannot be empty")
@@ -28,6 +30,8 @@ class User:
             print("Username already exists")
             return False
         return True
+
+
 
     @staticmethod
     def validate_name(name):
@@ -46,13 +50,13 @@ class User:
     @staticmethod
     def validate_phone(phone):
         if not phone.strip():
-            print("Phone cannot be empty.")
+            print("Phone cannot be empty")
 
     @staticmethod
     def validate_age(age):
         if not age.strip():
-            print("Age cannot be empty.")
+            print("Age cannot be empty")
         if not age.isdigit():
-            print("Age must be a number.")
+            print("Age must be a number")
         if int(age) <= 0:
-            print("Age must be greater than 0.")
+            print("Age must be greater than 0")"""

@@ -1,7 +1,6 @@
 import re
 import json
-from User_Model import User
-import User_Manager
+import User_Manager as User
 
 while True:
         print("\n--- User CRUD Menu ---")
@@ -10,7 +9,7 @@ while True:
         print("3. Update User")
         print("4. Delete User")
         print("5. List All Users")
-        print("6. Exit")
+        print("0. Exit")
 
         choice = input("Enter choice (1–6): ")
 
@@ -24,8 +23,7 @@ while True:
             User.delete_user()
         elif choice == '5':
             User.list_users()
-        elif choice == '6':
-            print("Exiting...")
+        elif choice == '0':
             break
         else:
-            print("Invalid choice. Try again.")
+            print("Error. Try again")
