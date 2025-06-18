@@ -144,7 +144,6 @@ class UserManager:
             print("User deleted successfully")
         else:
             print("User is not found")
-
     def show_all_users(self):
         if not self.users:
             print("No users found")
